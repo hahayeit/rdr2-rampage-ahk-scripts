@@ -1,8 +1,28 @@
-; RDR2 Rampage - Attempts to add each of 664 listed provision identifiers, confirming the default quantity of 1.
-; Requires AutoHotkey v2. See README.md for setup and quantity assumptions.
-; Open Character Stats -> Items -> Add to Inventory -> empty Custom input.
-; F8 start | F9 pause/resume between items | F10 stop after current item
-; F6 Enter test | F7 animal-fat identifier test (finish quantity manually)
+; RDR2 Rampage - Add 1 of every provision
+; FIXED VERSION - does NOT use clipboard paste.
+; Requires AutoHotkey v2.
+;
+; The previous version failed because Rampage's in-game Custom input
+; does not reliably accept Ctrl+V. This version sends real keyboard
+; events for every character.
+;
+; HOW TO USE
+; 1. Start RDR2 Story Mode and open Rampage.
+; 2. Go to Character Stats -> Items -> Add to Inventory.
+; 3. Open the "Custom" input so the blinking text cursor is visible.
+; 4. Press F8.
+;
+; F9  = pause/resume
+; F10 = stop
+;
+; IMPORTANT:
+; This version assumes Rampage's Add to Inventory custom entry adds
+; one item when the item identifier is submitted. It does NOT type a
+; separate quantity "1" after each name, because your recording shows
+; that doing so was being entered into the same Custom text field.
+;
+; Start with F7 TEST first. It enters PROVISION_ANIMAL_FAT only.
+; If Rampage accepts that correctly, reopen Custom and press F8.
 
 #Requires AutoHotkey v2.0
 #SingleInstance Force
